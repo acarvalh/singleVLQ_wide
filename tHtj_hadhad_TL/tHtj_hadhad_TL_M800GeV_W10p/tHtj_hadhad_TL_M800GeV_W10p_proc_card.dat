@@ -14,6 +14,6 @@ define bb = b b~
 define tt = t t~
 define ww = w+ w-
 import model VLQ_NLO_v3_4FNS_UFO-zh3
-generate  p p > tp > t~ H t j / x y bp  ,  (t~ > b~ w- , w- > lep lep  QCD=99), (t > b w+ , w+ > lep lep  QCD=99)
-add process  p p > tp~ > t H t~ j / x y bp  , (t~ > b~ w- , w- > lep lep  QCD=99), (t > b w+ , w+ > lep lep  QCD=99) 
+generate  p p > tp > t~ H t j / x y bp  ,  (t~ > b~ w- , w- > j j  QCD=99), (t > b w+ , w+ > j j  QCD=99)
+add process  p p > tp~ > t H t~ j / x y bp  , (t~ > b~ w- , w- > j j  QCD=99), (t > b w+ , w+ > j j  QCD=99) 
 output  tHtj_hadhad_TL_M800GeV_W10p -nojpeg
