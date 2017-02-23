@@ -1,0 +1,24 @@
+set group_subprocesses Auto
+set ignore_six_quark_processes False
+set loop_optimized_output True
+set complex_mass_scheme False
+import model sm
+define p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+ ta+ 
+define l- = e- mu- ta-
+define vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+define lep =  l+ l- vl vl~
+define bb = b b~
+define tt = t t~
+define ww = w+ w-
+import model VLQ_NLO_v3_4FNS_UFO-zh3
+generate  p p > tp > t~ H t j / x y bp  ,  (t~ > b~ w- , w- > lep lep  QCD=99), (t > b w+ , w+ > j j  QCD=99)
+add process  p p > tp~ > t H t~ j / x y bp  , (t~ > b~ w- , w- > lep lep  QCD=99), (t > b w+ , w+ > j j  QCD=99) 
+add process  p p > tp~ > t H t~ j / x y bp  , (t~ > b~ w- , w- > lep lep  QCD=99), (t > b w+ , w+ > j j  QCD=99)
+add process  p p > tp > t H t~ j / x y bp  , (t~ > b~ w- , w- > j j  QCD=99), (t > b w+ , w+ > lep lep  QCD=99)
+add process  p p > tp~ > t H t~ j / x y bp  , (t~ > b~ w- , w- > j j  QCD=99), (t > b w+ , w+ > lep lep  QCD=99)
+add process  p p > tp > t H t~ j / x y bp  , (t~ > b~ w- , w- > lep lep  QCD=99), (t > b w+ , w+ > lep lep  QCD=99)
+add process  p p > tp~ > t H t~ j / x y bp  , (t~ > b~ w- , w- > j j  QCD=99), (t > b w+ , w+ > j j  QCD=99)
+output  tHtj_lephad_TR_M800GeV_W10p -nojpeg
